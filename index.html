@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spunk.My — The SpunkArt Empire Hub</title>
+<meta name="description" content="Welcome to My SPUNK. Built by one person on Bitcoin. All free sites, tools, games, and communities from SPUNK LLC — @SpunkArt13.">
+<link rel="canonical" href="https://spunk.my/">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧡</text></svg>">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--card:#1a1a2e;--card2:#12121a;--purple:#bf5af2;--cyan:#00f5d4;--text:#f0f0f0;--muted:#a0a0b8;--border:#2a2a3e;--radius:12px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.navbar{position:sticky;top:0;z-index:100;background:rgba(10,10,15,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-logo{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,#bf5af2,#00f5d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero{padding:80px 24px 64px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(191,90,242,.15),transparent 70%);pointer-events:none}
+.hero-inner{max-width:720px;margin:0 auto;position:relative}
+.avatar{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,#bf5af2,#00f5d4);display:flex;align-items:center;justify-content:center;font-size:3rem;margin:0 auto 24px;box-shadow:0 0 40px rgba(191,90,242,.4)}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.2rem,6vw,3.6rem);font-weight:800;line-height:1.1;margin-bottom:16px}
+.grad{background:linear-gradient(135deg,#bf5af2,#00f5d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{font-size:1rem;color:var(--muted);max-width:560px;margin:0 auto 32px}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,#bf5af2,#00f5d4);color:#000;font-weight:800;padding:14px 28px;border-radius:50px;font-size:1rem;border:none;cursor:pointer;transition:.2s}
+.btn-primary:hover{transform:scale(1.04);box-shadow:0 0 24px rgba(191,90,242,.4)}
+.btn-secondary{background:transparent;border:1px solid rgba(191,90,242,.4);color:var(--purple);font-weight:700;padding:13px 24px;border-radius:50px;font-size:.95rem;cursor:pointer;transition:.2s}
+.btn-secondary:hover{background:rgba(191,90,242,.08)}
+.section{max-width:1100px;margin:0 auto;padding:48px 24px}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:8px}
+.section-sub{color:var(--muted);margin-bottom:32px;font-size:.95rem}
+.story-box{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px;max-width:700px;margin:0 auto}
+.story-box p{color:var(--muted);line-height:1.8;margin-bottom:16px;font-size:.95rem}
+.story-box p:last-child{margin-bottom:0}
+.story-box strong{color:var(--text)}
+.empire-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.empire-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:.2s;display:flex;gap:14px;align-items:flex-start}
+.empire-card:hover{border-color:var(--purple);transform:translateY(-2px);box-shadow:0 4px 20px rgba(191,90,242,.1)}
+.empire-card .e-icon{font-size:1.8rem;flex-shrink:0}
+.empire-card-info strong{display:block;font-size:.95rem;margin-bottom:4px}
+.empire-card-info span{color:var(--muted);font-size:.8rem;line-height:1.5}
+.support-box{background:linear-gradient(135deg,rgba(191,90,242,.1),rgba(0,245,212,.05));border:1px solid rgba(191,90,242,.2);border-radius:20px;padding:32px;text-align:center;max-width:600px;margin:0 auto}
+.btc-addr{background:#0a0a0f;border:1px solid rgba(191,90,242,.3);border-radius:10px;padding:14px;font-family:monospace;font-size:.78rem;word-break:break-all;color:var(--purple);cursor:pointer;margin:16px 0;transition:.2s}
+.btc-addr:hover{border-color:var(--purple);background:rgba(191,90,242,.05)}
+.follow-grid{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.follow-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 24px;display:flex;align-items:center;gap:10px;transition:.2s}
+.follow-card:hover{border-color:var(--cyan)}
+footer{background:var(--card2);border-top:1px solid var(--border);padding:40px 24px;text-align:center}
+.footer-logo{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:800;background:linear-gradient(135deg,#bf5af2,#00f5d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.mobile-nav{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(18,18,26,.96);backdrop-filter:blur(12px);border-top:1px solid var(--border);z-index:200}
+.mobile-nav-inner{display:flex;justify-content:space-around;padding:8px 0 max(8px,env(safe-area-inset-bottom))}
+.m-nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--muted);font-size:.65rem;font-weight:600;padding:4px 12px;text-decoration:none}
+.m-nav-item.active{color:var(--purple)}
+.m-nav-item span:first-child{font-size:1.2rem}
+@media(max-width:768px){.mobile-nav{display:block}.hero{padding:60px 16px 40px}.section{padding:32px 16px}.empire-grid{grid-template-columns:1fr}body{padding-bottom:64px}}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">spunk.my</a>
+    <div style="display:flex;gap:20px">
+      <a href="#empire" style="color:var(--muted);font-size:.9rem;font-weight:600">Empire</a>
+      <a href="#support" style="color:var(--muted);font-size:.9rem;font-weight:600">Support</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="avatar">🧡</div>
+    <h1>Welcome to <span class="grad">My SPUNK</span></h1>
+    <p>Built by one person. Powered by Bitcoin. Growing forever. Every site is free. No gatekeeping. No excuses.</p>
+    <div class="hero-btns">
+      <a href="https://x.com/SpunkArt13" target="_blank" rel="noopener" class="btn-primary">𝕏 Follow @SpunkArt13</a>
+      <a href="#empire" class="btn-secondary">View the Empire</a>
+    </div>
+  </div>
+</div>
+
+<section class="section" id="story">
+  <div class="section-title" style="text-align:center">🧡 What is SPUNK?</div>
+  <div class="section-sub" style="text-align:center">The story behind the empire</div>
+  <div class="story-box">
+    <p><strong>SPUNK LLC is a one-person internet empire built on Bitcoin, AI, and zero gatekeeping.</strong> Every site is free. Every tool works. No login needed. No paywalls. No excuses.</p>
+    <p>Started by <strong>@SpunkArt13</strong>, the SPUNK empire now spans <strong>16+ websites</strong> covering crypto, gaming, AI art, parenting, home office, prediction markets, and more — all built and maintained by one human being with the help of AI.</p>
+    <p>The mission is simple: <strong>make the internet more fun, more open, and more profitable for everyone who shows up.</strong> If you love what we do, tip a sat. If you don't, that's fine too — it's all free anyway.</p>
+    <p>Filed as <strong>SPUNK LLC in Illinois, 2026</strong>. This is not a hobby. This is a real company built by a real person who believes the internet should be free and fun for everyone.</p>
+  </div>
+</section>
+
+<section class="section" id="empire">
+  <div class="section-title">🌐 The SPUNK Empire</div>
+  <div class="section-sub">16+ free sites and growing. All built by one person.</div>
+  <div class="empire-grid">
+    <a href="https://spunk.bet" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🎰</div><div class="empire-card-info"><strong>Spunk.Bet</strong><span>Free Bitcoin casino. Claim 10,000 SPUNK runes daily. No deposit ever.</span></div></a>
+    <a href="https://pfp.best" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🎨</div><div class="empire-card-info"><strong>PFP.Best</strong><span>Upload your PFP, get rated 1-10. Climb the community leaderboard.</span></div></a>
+    <a href="https://predict.horse" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🐎</div><div class="empire-card-info"><strong>Predict.Horse</strong><span>Horse race and crypto prediction markets. Bet with insight.</span></div></a>
+    <a href="https://scam.wiki" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🔍</div><div class="empire-card-info"><strong>Scam.Wiki</strong><span>Community-powered scam detection. Check before you trust anything.</span></div></a>
+    <a href="https://spunk.wiki" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">📖</div><div class="empire-card-info"><strong>Spunk.Wiki</strong><span>Crypto, Web3, NFT, and meme culture — explained simply. Free forever.</span></div></a>
+    <a href="https://spunk.work" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">⚙️</div><div class="empire-card-info"><strong>Spunk.Work</strong><span>150+ business automation tools. Automate everything in your company.</span></div></a>
+    <a href="https://spunk.casino" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🃏</div><div class="empire-card-info"><strong>Spunk.Casino</strong><span>The #1 crypto casino guide. Honest reviews, best bonuses.</span></div></a>
+    <a href="https://spunk.surf" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🏄</div><div class="empire-card-info"><strong>Spunk.Surf</strong><span>Curated web discovery. Surf the best sites and earn while you go.</span></div></a>
+    <a href="https://spunk.best" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">⭐</div><div class="empire-card-info"><strong>Spunk.Best</strong><span>The best of everything — tools, deals, and sites — all curated.</span></div></a>
+    <a href="https://spunk.casa" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🏠</div><div class="empire-card-info"><strong>Spunk.Casa</strong><span>Work from home tools, smart home gear, and home business automation.</span></div></a>
+    <a href="https://spunk.baby" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🍼</div><div class="empire-card-info"><strong>Spunk.Baby</strong><span>Top baby gear, parenting tips, and gift guides for new parents.</span></div></a>
+    <a href="https://spunk.mom" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">💜</div><div class="empire-card-info"><strong>Spunk.Mom</strong><span>Side hustles, favorite finds, and community for moms who want more.</span></div></a>
+    <a href="https://i13.fun" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🎉</div><div class="empire-card-info"><strong>i13.Fun</strong><span>Daily fun, free rewards, games, and prizes. Come back every day.</span></div></a>
+    <a href="https://predict.pics" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🖼️</div><div class="empire-card-info"><strong>Predict.Pics</strong><span>Predict which images go viral next. Community image predictions.</span></div></a>
+    <a href="https://predict.gay" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🌈</div><div class="empire-card-info"><strong>Predict.Gay</strong><span>LGBTQ+ community prediction markets. Inclusive. Free. Fun.</span></div></a>
+    <a href="https://spunkart.com" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🎨</div><div class="empire-card-info"><strong>SpunkArt.com</strong><span>The original SpunkArt portfolio and brand home base.</span></div></a>
+  </div>
+</section>
+
+<section class="section" id="support">
+  <div class="section-title" style="text-align:center">₿ Support SPUNK</div>
+  <div class="section-sub" style="text-align:center">Every sat helps build the next free site</div>
+  <div class="support-box">
+    <p style="font-size:1rem;margin-bottom:4px">Every tip goes directly to building more free sites, tools, and games.</p>
+    <p style="color:var(--muted);font-size:.88rem;margin-bottom:4px">No Patreon. No subscription. Just Bitcoin.</p>
+    <div class="btc-addr" onclick="navigator.clipboard.writeText('bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm').then(()=>{this.textContent='✓ Copied! Thank you 🧡';setTimeout(()=>this.textContent='bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm',3000)})">bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm</div>
+    <p style="color:var(--muted);font-size:.78rem">Click to copy BTC address • Even 1 sat counts 🧡</p>
+  </div>
+  <div style="margin-top:32px">
+    <div class="section-sub" style="text-align:center">Follow & share to help grow the empire</div>
+    <div class="follow-grid">
+      <a href="https://x.com/SpunkArt13" target="_blank" rel="noopener" class="follow-card"><span style="font-size:1.2rem">𝕏</span><span style="font-weight:700">@SpunkArt13</span></a>
+      <a href="https://github.com/Spunkeroo" target="_blank" rel="noopener" class="follow-card"><span style="font-size:1.2rem">🐙</span><span style="font-weight:700">GitHub/Spunkeroo</span></a>
+      <a href="https://spunkart.com" target="_blank" rel="noopener" class="follow-card"><span style="font-size:1.2rem">🎨</span><span style="font-weight:700">SpunkArt.com</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">spunk.my</div>
+  <p style="color:var(--muted);font-size:.85rem;margin-bottom:16px">SPUNK LLC — Illinois, 2026 — Built by @SpunkArt13 — All sites free forever</p>
+  <button class="tip-spunk-btn" onclick="openTipModal()">🧡 Tip Spunk</button>
+  <p style="color:var(--muted);font-size:.75rem;margin-top:16px">© 2026 SPUNK LLC. Not financial advice.</p>
+</footer>
+<nav class="mobile-nav">
+  <div class="mobile-nav-inner">
+    <a href="/" class="m-nav-item active"><span>🧡</span>Home</a>
+    <a href="#empire" class="m-nav-item"><span>🌐</span>Empire</a>
+    <a href="https://spunk.bet" class="m-nav-item"><span>🎰</span>Play</a>
+    <a href="#support" class="m-nav-item"><span>₿</span>Support</a>
+  </div>
+</nav>
+<style>
+.tip-spunk-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1.1rem;border:none;border-radius:999px;font-weight:800;font-size:.85rem;cursor:pointer;color:#fff;background:linear-gradient(135deg,#a855f7,#7c3aed,#c026d3);box-shadow:0 0 14px rgba(168,85,247,.6);transition:all .2s;animation:tipGlow 2s ease-in-out infinite}
+@keyframes tipGlow{0%,100%{box-shadow:0 0 14px rgba(168,85,247,.6)}50%{box-shadow:0 0 28px rgba(192,38,211,.85)}}
+.tip-overlay{display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.78);backdrop-filter:blur(6px);justify-content:center;align-items:center}
+.tip-overlay.active{display:flex}
+.tip-box{background:#12121a;border:2px solid #7c3aed;border-radius:1.25rem;padding:2rem;max-width:400px;width:90%;text-align:center}
+.tip-addr{background:#0a0a0f;border:1px solid #7c3aed;border-radius:.5rem;padding:.75rem;font-family:monospace;font-size:.7rem;word-break:break-all;color:#c084fc;cursor:pointer;margin-bottom:.75rem}
+.tip-close{width:100%;padding:.6rem;background:#1a1a2e;border:1px solid #2a2a3e;color:#f0f0f0;border-radius:10px;font-size:.88rem;cursor:pointer;font-family:inherit}
+.vtr-badge{position:fixed;bottom:76px;left:12px;z-index:9997;display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.72);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 12px 5px 8px;font-size:.72rem;font-weight:700;color:#fff;pointer-events:none}
+.vtr-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0;animation:vtrP 2s ease-in-out infinite}
+@keyframes vtrP{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}60%{box-shadow:0 0 0 5px rgba(34,197,94,0)}}
+</style>
+<div class="tip-overlay" id="tip-modal" onclick="if(event.target===this)closeTip()">
+  <div class="tip-box">
+    <h3 style="color:#c084fc;margin-bottom:.5rem">🧡 Tip Spunk</h3>
+    <p style="color:#a0a0b8;font-size:.88rem;margin-bottom:1rem">Every sat goes to building more free sites. Thank you.</p>
+    <div class="tip-addr" onclick="navigator.clipboard.writeText('bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm').then(()=>{this.textContent='✓ Copied! 🧡';setTimeout(()=>this.textContent='bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm',2000)})">bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm</div>
+    <p style="font-size:.72rem;color:#6b6b80;margin-bottom:1rem">Click to copy • Bitcoin (BTC)</p>
+    <button class="tip-close" onclick="closeTip()">Close</button>
+  </div>
+</div>
+<div class="vtr-badge" id="vtr-badge"><span class="vtr-dot"></span><span id="vtr-count">...</span></div>
+<script>
+window.openTipModal=function(){document.getElementById('tip-modal').classList.add('active')};
+window.closeTip=function(){document.getElementById('tip-modal').classList.remove('active')};
+(function(){if(window._vtrInit)return;window._vtrInit=true;var DB='https://predict-network-ec767-default-rtdb.firebaseio.com';var site=(location.hostname||'local').replace(/\./g,'_').replace(/[#$\[\]]/g,'_');var sid='s'+Math.random().toString(36).slice(2)+Date.now().toString(36);var sRef=DB+'/vtr/'+site+'/s/'+sid+'.json';var allRef=DB+'/vtr/'+site+'/s.json';function ping(){fetch(sRef,{method:'PUT',body:JSON.stringify({t:Date.now()}),headers:{'Content-Type':'application/json'}}).catch(function(){})}function refresh(){fetch(allRef).then(r=>r.json()).then(d=>{var n=1;if(d&&typeof d==='object'){n=Math.max(1,Object.values(d).filter(v=>v&&v.t&&(Date.now()-v.t)<25000).length);}var el=document.getElementById('vtr-count');if(el)el.textContent=n+(n===1?' visitor':' visitors')+' online';}).catch(()=>{})}var day=new Date().toISOString().slice(0,10);fetch(DB+'/vtr/'+site+'/hits/'+day+'.json').then(r=>r.json()).then(n=>{fetch(DB+'/vtr/'+site+'/hits/'+day+'.json',{method:'PUT',body:JSON.stringify((n||0)+1),headers:{'Content-Type':'application/json'}}).catch(()=>{})}).catch(()=>{});window.addEventListener('pagehide',()=>fetch(sRef,{method:'DELETE',keepalive:true}).catch(()=>{}));ping();refresh();setInterval(()=>{ping();refresh();},10000);})();
+</script>
+</body>
+</html>
