@@ -2,193 +2,495 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spunk.My — The SpunkArt Empire Hub</title>
-<meta name="description" content="Welcome to My SPUNK. Built by one person on Bitcoin. All free sites, tools, games, and communities from SPUNK LLC — @SpunkArt13.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spunk.My — The SPUNK Empire: Every Site by @SpunkArt13</title>
+<meta name="description" content="Every site in the SPUNK empire. 150+ domains across AI, prediction markets, crypto, gaming, and more — all built by @SpunkArt13 / SPUNK LLC.">
+<meta property="og:title" content="The SPUNK Empire — Every Site by @SpunkArt13">
+<meta property="og:description" content="150+ sites: AI bots, prediction markets, crypto casino, gaming, tools, and more.">
 <link rel="canonical" href="https://spunk.my/">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧡</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>S</text></svg>">
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--card:#1a1a2e;--card2:#12121a;--purple:#bf5af2;--cyan:#00f5d4;--text:#f0f0f0;--muted:#a0a0b8;--border:#2a2a3e;--radius:12px}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--bg2:#111120;--bg3:#1a1a2e;--border:#2a2a3e;--text:#f0f0f0;--muted:#8080a8;--purple:#bf5af2;--cyan:#00f5d4;--orange:#ff5f1f;--green:#22c55e;--blue:#3b82f6;--gold:#f59e0b}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-.navbar{position:sticky;top:0;z-index:100;background:rgba(10,10,15,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
-.nav-logo{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:800;background:linear-gradient(135deg,#bf5af2,#00f5d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero{padding:80px 24px 64px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(191,90,242,.15),transparent 70%);pointer-events:none}
-.hero-inner{max-width:720px;margin:0 auto;position:relative}
-.avatar{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,#bf5af2,#00f5d4);display:flex;align-items:center;justify-content:center;font-size:3rem;margin:0 auto 24px;box-shadow:0 0 40px rgba(191,90,242,.4)}
-.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2.2rem,6vw,3.6rem);font-weight:800;line-height:1.1;margin-bottom:16px}
-.grad{background:linear-gradient(135deg,#bf5af2,#00f5d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero p{font-size:1rem;color:var(--muted);max-width:560px;margin:0 auto 32px}
-.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.btn-primary{background:linear-gradient(135deg,#bf5af2,#00f5d4);color:#000;font-weight:800;padding:14px 28px;border-radius:50px;font-size:1rem;border:none;cursor:pointer;transition:.2s}
-.btn-primary:hover{transform:scale(1.04);box-shadow:0 0 24px rgba(191,90,242,.4)}
-.btn-secondary{background:transparent;border:1px solid rgba(191,90,242,.4);color:var(--purple);font-weight:700;padding:13px 24px;border-radius:50px;font-size:.95rem;cursor:pointer;transition:.2s}
-.btn-secondary:hover{background:rgba(191,90,242,.08)}
-.section{max-width:1100px;margin:0 auto;padding:48px 24px}
-.section-title{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:800;margin-bottom:8px}
-.section-sub{color:var(--muted);margin-bottom:32px;font-size:.95rem}
-.story-box{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:32px;max-width:700px;margin:0 auto}
-.story-box p{color:var(--muted);line-height:1.8;margin-bottom:16px;font-size:.95rem}
-.story-box p:last-child{margin-bottom:0}
-.story-box strong{color:var(--text)}
-.empire-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-.empire-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:.2s;display:flex;gap:14px;align-items:flex-start}
-.empire-card:hover{border-color:var(--purple);transform:translateY(-2px);box-shadow:0 4px 20px rgba(191,90,242,.1)}
-.empire-card .e-icon{font-size:1.8rem;flex-shrink:0}
-.empire-card-info strong{display:block;font-size:.95rem;margin-bottom:4px}
-.empire-card-info span{color:var(--muted);font-size:.8rem;line-height:1.5}
-.support-box{background:linear-gradient(135deg,rgba(191,90,242,.1),rgba(0,245,212,.05));border:1px solid rgba(191,90,242,.2);border-radius:20px;padding:32px;text-align:center;max-width:600px;margin:0 auto}
-.btc-addr{background:#0a0a0f;border:1px solid rgba(191,90,242,.3);border-radius:10px;padding:14px;font-family:monospace;font-size:.78rem;word-break:break-all;color:var(--purple);cursor:pointer;margin:16px 0;transition:.2s}
-.btc-addr:hover{border-color:var(--purple);background:rgba(191,90,242,.05)}
-.follow-grid{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.follow-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 24px;display:flex;align-items:center;gap:10px;transition:.2s}
+button{cursor:pointer;font-family:inherit}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(10,10,15,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:.9rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-weight:800;font-size:1.2rem;background:linear-gradient(135deg,#bf5af2,#00f5d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:1.5rem;font-size:.85rem}
+.nav-links a{color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.tip-btn-nav{background:linear-gradient(135deg,#a855f7,#7c3aed);color:#fff;border:none;padding:.45rem 1rem;border-radius:20px;font-weight:700;font-size:.8rem;transition:opacity .2s}
+.tip-btn-nav:hover{opacity:.85}
+
+/* HERO */
+.hero{max-width:860px;margin:0 auto;padding:5rem 2rem 2.5rem;text-align:center}
+.hero-badge{display:inline-block;background:rgba(191,90,242,.12);color:var(--purple);border:1px solid rgba(191,90,242,.3);border-radius:20px;padding:.3rem .9rem;font-size:.8rem;font-weight:700;margin-bottom:1.5rem;letter-spacing:.05em}
+.hero h1{font-size:clamp(2.2rem,6vw,3.5rem);font-weight:800;line-height:1.1;margin-bottom:1rem}
+.grad{background:linear-gradient(135deg,#bf5af2,#00f5d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--muted);font-size:1.05rem;max-width:560px;margin:0 auto 2rem}
+.hero-btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,#bf5af2,#7c3aed);color:#fff;border:none;padding:.75rem 1.75rem;border-radius:10px;font-weight:700;font-size:.95rem;transition:opacity .2s}
+.btn-primary:hover{opacity:.85}
+.btn-secondary{background:transparent;border:1px solid var(--border);color:var(--text);padding:.75rem 1.5rem;border-radius:10px;font-weight:600;font-size:.95rem;transition:border-color .2s}
+.btn-secondary:hover{border-color:var(--purple)}
+
+/* STATS */
+.stats{display:flex;gap:0;justify-content:center;flex-wrap:wrap;margin:2.5rem auto 0;max-width:760px;background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.stat{flex:1;min-width:140px;padding:1rem 1.5rem;text-align:center;border-right:1px solid var(--border)}
+.stat:last-child{border-right:none}
+.stat-val{font-size:1.5rem;font-weight:800;color:var(--purple)}
+.stat-lbl{font-size:.72rem;color:var(--muted);margin-top:.1rem}
+
+/* CONTROLS */
+.controls{max-width:1200px;margin:2.5rem auto 0;padding:0 2rem}
+.search-wrap{position:relative;margin-bottom:1.25rem}
+.search-icon{position:absolute;left:.85rem;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.search-input{width:100%;background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:.75rem 1rem .75rem 2.4rem;color:var(--text);font-size:.95rem;outline:none;transition:border-color .2s}
+.search-input:focus{border-color:var(--purple)}
+.filter-tabs{display:flex;gap:.5rem;flex-wrap:wrap}
+.filter-tab{background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:.35rem .85rem;font-size:.78rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s}
+.filter-tab:hover{border-color:var(--purple);color:var(--purple)}
+.filter-tab.active{background:var(--purple);border-color:var(--purple);color:#fff}
+
+/* GRID */
+.grid-wrap{max-width:1200px;margin:1.5rem auto;padding:0 2rem 4rem}
+.result-count{font-size:.82rem;color:var(--muted);margin-bottom:1rem}
+.sites-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem}
+
+/* CARD */
+.site-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.2rem;transition:transform .2s,border-color .2s;display:flex;flex-direction:column;gap:.5rem}
+.site-card:hover{transform:translateY(-2px);border-color:rgba(191,90,242,.4)}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
+.card-domain{font-weight:700;font-size:.95rem;color:#fff}
+.card-tag{flex-shrink:0;font-size:.64rem;font-weight:700;padding:.18rem .5rem;border-radius:4px;text-transform:uppercase;letter-spacing:.04em}
+.card-desc{color:var(--muted);font-size:.8rem;line-height:1.45;flex:1}
+.card-link{font-size:.75rem;color:var(--cyan);font-weight:600;transition:opacity .2s}
+.card-link:hover{opacity:.75}
+
+/* TAG COLORS */
+.tag-flagship{background:rgba(245,158,11,.15);color:var(--gold)}
+.tag-spunk{background:rgba(191,90,242,.15);color:var(--purple)}
+.tag-predict{background:rgba(59,130,246,.15);color:var(--blue)}
+.tag-aliens{background:rgba(0,245,212,.12);color:var(--cyan)}
+.tag-plush{background:rgba(255,105,180,.15);color:#ff69b4}
+.tag-clown{background:rgba(255,95,31,.15);color:var(--orange)}
+.tag-monkey{background:rgba(200,160,82,.15);color:#c8a052}
+.tag-stimulant{background:rgba(34,197,94,.12);color:var(--green)}
+.tag-ai{background:rgba(168,85,247,.15);color:#a855f7}
+.tag-13{background:rgba(249,115,22,.15);color:#f97316}
+.tag-claw{background:rgba(20,184,166,.12);color:#14b8a6}
+.tag-flip{background:rgba(239,68,68,.12);color:#ef4444}
+.tag-scam{background:rgba(107,114,128,.15);color:#9ca3af}
+.tag-other{background:rgba(100,116,139,.15);color:#94a3b8}
+.tag-pizza{background:rgba(251,146,60,.15);color:#fb923c}
+.tag-sell{background:rgba(52,211,153,.15);color:#34d399}
+
+/* TIP */
+.tip-spunk-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1.1rem;border:none;border-radius:999px;font-weight:800;font-size:.85rem;color:#fff;background:linear-gradient(135deg,#a855f7,#7c3aed,#c026d3);box-shadow:0 0 14px rgba(168,85,247,.5);transition:all .2s;animation:tipGlow 2.5s ease-in-out infinite}
+@keyframes tipGlow{0%,100%{box-shadow:0 0 14px rgba(168,85,247,.5)}50%{box-shadow:0 0 28px rgba(192,38,211,.8)}}
+.tip-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);justify-content:center;align-items:center}
+.tip-overlay.active{display:flex}
+.tip-box{background:#12121a;border:2px solid #7c3aed;border-radius:1.25rem;padding:2rem;max-width:400px;width:90%;text-align:center}
+.tip-addr{background:var(--bg);border:1px solid #7c3aed;border-radius:.5rem;padding:.75rem;font-family:monospace;font-size:.7rem;word-break:break-all;color:#c084fc;cursor:pointer;margin-bottom:.75rem;transition:background .2s}
+.tip-addr:hover{background:rgba(124,58,237,.08)}
+.tip-close{width:100%;padding:.6rem;background:var(--bg3);border:1px solid var(--border);color:var(--text);border-radius:10px;font-size:.88rem}
+
+/* VTR */
+.vtr-badge{position:fixed;bottom:1rem;left:.75rem;z-index:9997;display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.75);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:5px 12px 5px 8px;font-size:.72rem;font-weight:700;color:#fff;pointer-events:none}
+.vtr-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;animation:vtrP 2s ease-in-out infinite}
+@keyframes vtrP{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}60%{box-shadow:0 0 0 5px rgba(34,197,94,0)}}
+
+/* SUPPORT SECTION */
+.support-section{max-width:860px;margin:0 auto;padding:0 2rem 4rem;text-align:center}
+.support-box{background:linear-gradient(135deg,rgba(191,90,242,.08),rgba(0,245,212,.04));border:1px solid rgba(191,90,242,.2);border-radius:16px;padding:2rem}
+.support-box h2{font-size:1.25rem;font-weight:700;margin-bottom:.5rem}
+.support-box p{color:var(--muted);font-size:.9rem;margin-bottom:1.25rem}
+.btc-addr{background:var(--bg);border:1px solid rgba(191,90,242,.3);border-radius:10px;padding:1rem;font-family:monospace;font-size:.72rem;word-break:break-all;color:var(--purple);cursor:pointer;margin-bottom:.5rem;transition:all .2s;display:block;text-align:left}
+.btc-addr:hover{border-color:var(--purple);background:rgba(191,90,242,.04)}
+.follow-row{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+.follow-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:.8rem 1.4rem;display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:.88rem;transition:border-color .2s}
 .follow-card:hover{border-color:var(--cyan)}
-footer{background:var(--card2);border-top:1px solid var(--border);padding:40px 24px;text-align:center}
-.footer-logo{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:800;background:linear-gradient(135deg,#bf5af2,#00f5d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
-.mobile-nav{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(18,18,26,.96);backdrop-filter:blur(12px);border-top:1px solid var(--border);z-index:200}
-.mobile-nav-inner{display:flex;justify-content:space-around;padding:8px 0 max(8px,env(safe-area-inset-bottom))}
-.m-nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--muted);font-size:.65rem;font-weight:600;padding:4px 12px;text-decoration:none}
-.m-nav-item.active{color:var(--purple)}
-.m-nav-item span:first-child{font-size:1.2rem}
-@media(max-width:768px){.mobile-nav{display:block}.hero{padding:60px 16px 40px}.section{padding:32px 16px}.empire-grid{grid-template-columns:1fr}body{padding-bottom:64px}}
+
+/* FOOTER */
+footer{border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.85rem}
+footer a{color:var(--muted)}
+footer a:hover{color:#fff}
+
+@media(max-width:640px){
+  .nav-links{display:none}
+  .hero{padding:3rem 1.5rem 2rem}
+  .controls,.grid-wrap,.support-section{padding-left:1.25rem;padding-right:1.25rem}
+  .stat{min-width:110px}
+  .stats{border-radius:10px}
+}
 </style>
 </head>
 <body>
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="/" class="nav-logo">spunk.my</a>
-    <div style="display:flex;gap:20px">
-      <a href="#empire" style="color:var(--muted);font-size:.9rem;font-weight:600">Empire</a>
-      <a href="#support" style="color:var(--muted);font-size:.9rem;font-weight:600">Support</a>
-    </div>
+
+<nav class="nav">
+  <span class="nav-logo">spunk.my</span>
+  <div class="nav-links">
+    <a href="#sites">All Sites</a>
+    <a href="#support">Support</a>
+    <a href="https://spunk.bet" target="_blank">Spunk.Bet</a>
+    <a href="https://x.com/SpunkArt13" target="_blank">@SpunkArt13</a>
   </div>
+  <button class="tip-btn-nav" onclick="openTipModal()">Tip BTC</button>
 </nav>
 
 <div class="hero">
-  <div class="hero-inner">
-    <div class="avatar">🧡</div>
-    <h1>Welcome to <span class="grad">My SPUNK</span></h1>
-    <p>Built by one person. Powered by Bitcoin. Growing forever. Every site is free. No gatekeeping. No excuses.</p>
-    <div class="hero-btns">
-      <a href="https://x.com/SpunkArt13" target="_blank" rel="noopener" class="btn-primary">𝕏 Follow @SpunkArt13</a>
-      <a href="#empire" class="btn-secondary">View the Empire</a>
-    </div>
+  <div class="hero-badge">SPUNK LLC · @SpunkArt13 · Illinois 2026</div>
+  <h1>The <span class="grad">SPUNK Empire</span></h1>
+  <p>Every site built by one person. AI tools, prediction markets, crypto gaming, merch, community sites — browse the whole empire.</p>
+  <div class="hero-btns">
+    <a href="https://x.com/SpunkArt13" target="_blank"><button class="btn-primary">Follow @SpunkArt13</button></a>
+    <a href="#sites"><button class="btn-secondary">Browse All Sites</button></a>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-val" id="totalCount">150+</div><div class="stat-lbl">Sites Live</div></div>
+    <div class="stat"><div class="stat-val">12+</div><div class="stat-lbl">Brand Networks</div></div>
+    <div class="stat"><div class="stat-val">1</div><div class="stat-lbl">Builder</div></div>
+    <div class="stat"><div class="stat-val"><span id="vtr-count-hero">...</span></div><div class="stat-lbl">Online Now</div></div>
   </div>
 </div>
 
-<section class="section" id="story">
-  <div class="section-title" style="text-align:center">🧡 What is SPUNK?</div>
-  <div class="section-sub" style="text-align:center">The story behind the empire</div>
-  <div class="story-box">
-    <p><strong>SPUNK LLC is a one-person internet empire built on Bitcoin, AI, and zero gatekeeping.</strong> Every site is free. Every tool works. No login needed. No paywalls. No excuses.</p>
-    <p>Started by <strong>@SpunkArt13</strong>, the SPUNK empire now spans <strong>120+ websites</strong> covering crypto, gaming, AI art, parenting, home office, prediction markets, and more — all built and maintained by one human being with the help of AI.</p>
-    <p>The mission is simple: <strong>make the internet more fun, more open, and more profitable for everyone who shows up.</strong> If you love what we do, tip a sat. If you don't, that's fine too — it's all free anyway.</p>
-    <p>Filed as <strong>SPUNK LLC in Illinois, 2026</strong>. This is not a hobby. This is a real company built by a real person who believes the internet should be free and fun for everyone.</p>
+<!-- FILTER + SEARCH -->
+<div class="controls" id="sites">
+  <div class="search-wrap">
+    <span class="search-icon">&#9906;</span>
+    <input class="search-input" type="text" id="searchInput" placeholder="Search all sites..." oninput="filterSites()">
   </div>
-</section>
-
-<section class="section" id="empire">
-  <div class="section-title">🌐 The SPUNK Empire</div>
-  <div class="section-sub">120+ free sites and growing. All built by one person.</div>
-  <div class="empire-grid">
-    <a href="https://spunk.bet" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🎰</div><div class="empire-card-info"><strong>Spunk.Bet</strong><span>Free Bitcoin casino. Claim 10,000 SPUNK runes daily. No deposit ever.</span></div></a>
-    <a href="https://pfp.best" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🎨</div><div class="empire-card-info"><strong>PFP.Best</strong><span>Upload your PFP, get rated 1-10. Climb the community leaderboard.</span></div></a>
-    <a href="https://predict.horse" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🐎</div><div class="empire-card-info"><strong>Predict.Horse</strong><span>Horse race and crypto prediction markets. Bet with insight.</span></div></a>
-    <a href="https://scam.wiki" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🔍</div><div class="empire-card-info"><strong>Scam.Wiki</strong><span>Community-powered scam detection. Check before you trust anything.</span></div></a>
-    <a href="https://spunk.wiki" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">📖</div><div class="empire-card-info"><strong>Spunk.Wiki</strong><span>Crypto, Web3, NFT, and meme culture — explained simply. Free forever.</span></div></a>
-    <a href="https://spunk.work" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">⚙️</div><div class="empire-card-info"><strong>Spunk.Work</strong><span>150+ business automation tools. Automate everything in your company.</span></div></a>
-    <a href="https://spunk.casino" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🃏</div><div class="empire-card-info"><strong>Spunk.Casino</strong><span>The #1 crypto casino guide. Honest reviews, best bonuses.</span></div></a>
-    <a href="https://spunk.surf" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🏄</div><div class="empire-card-info"><strong>Spunk.Surf</strong><span>Curated web discovery. Surf the best sites and earn while you go.</span></div></a>
-    <a href="https://spunk.best" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">⭐</div><div class="empire-card-info"><strong>Spunk.Best</strong><span>The best of everything — tools, deals, and sites — all curated.</span></div></a>
-    <a href="https://spunk.casa" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🏠</div><div class="empire-card-info"><strong>Spunk.Casa</strong><span>Work from home tools, smart home gear, and home business automation.</span></div></a>
-    <a href="https://spunk.baby" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🍼</div><div class="empire-card-info"><strong>Spunk.Baby</strong><span>Top baby gear, parenting tips, and gift guides for new parents.</span></div></a>
-    <a href="https://spunk.mom" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">💜</div><div class="empire-card-info"><strong>Spunk.Mom</strong><span>Side hustles, favorite finds, and community for moms who want more.</span></div></a>
-    <a href="https://i13.fun" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🎉</div><div class="empire-card-info"><strong>i13.Fun</strong><span>Daily fun, free rewards, games, and prizes. Come back every day.</span></div></a>
-    <a href="https://predict.pics" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🖼️</div><div class="empire-card-info"><strong>Predict.Pics</strong><span>Predict which images go viral next. Community image predictions.</span></div></a>
-    <a href="https://predict.gay" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🌈</div><div class="empire-card-info"><strong>Predict.Gay</strong><span>LGBTQ+ community prediction markets. Inclusive. Free. Fun.</span></div></a>
-    <a href="https://spunkart.com" target="_blank" rel="noopener" class="empire-card"><div class="e-icon">🎨</div><div class="empire-card-info"><strong>SpunkArt.com</strong><span>The original SpunkArt portfolio and brand home base.</span></div></a>
+  <div class="filter-tabs">
+    <button class="filter-tab active" onclick="setFilter('all',this)">All</button>
+    <button class="filter-tab" onclick="setFilter('flagship',this)">Flagship</button>
+    <button class="filter-tab" onclick="setFilter('spunk',this)">Spunk</button>
+    <button class="filter-tab" onclick="setFilter('predict',this)">Predict</button>
+    <button class="filter-tab" onclick="setFilter('aliens',this)">Aliens</button>
+    <button class="filter-tab" onclick="setFilter('plush',this)">Plush</button>
+    <button class="filter-tab" onclick="setFilter('ai',this)">AI / Bots</button>
+    <button class="filter-tab" onclick="setFilter('13',this)">i13 / 13</button>
+    <button class="filter-tab" onclick="setFilter('monkey',this)">Monkey</button>
+    <button class="filter-tab" onclick="setFilter('stimulant',this)">Stimulant</button>
+    <button class="filter-tab" onclick="setFilter('clown',this)">Clown</button>
+    <button class="filter-tab" onclick="setFilter('claw',this)">Claw</button>
+    <button class="filter-tab" onclick="setFilter('other',this)">Other</button>
   </div>
-</section>
+</div>
 
-<section class="section" id="support">
-  <div class="section-title" style="text-align:center">₿ Support SPUNK</div>
-  <div class="section-sub" style="text-align:center">Every sat helps build the next free site</div>
+<div class="grid-wrap">
+  <div class="result-count" id="resultCount"></div>
+  <div class="sites-grid" id="sitesGrid"></div>
+</div>
+
+<!-- SUPPORT -->
+<div class="support-section" id="support">
   <div class="support-box">
-    <p style="font-size:1rem;margin-bottom:4px">Every tip goes directly to building more free sites, tools, and games.</p>
-    <p style="color:var(--muted);font-size:.88rem;margin-bottom:4px">No Patreon. No subscription. Just Bitcoin.</p>
-    <div class="btc-addr" onclick="navigator.clipboard.writeText('bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm').then(()=>{this.textContent='✓ Copied! Thank you 🧡';setTimeout(()=>this.textContent='bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm',3000)})">bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm</div>
-    <p style="color:var(--muted);font-size:.78rem">Click to copy BTC address • Even 1 sat counts 🧡</p>
+    <h2>Support the Empire</h2>
+    <p>Every tip goes directly toward building more free sites and tools.</p>
+    <div class="btc-addr" id="btcAddrEl" onclick="copyBtc()">bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm</div>
+    <div style="font-size:.75rem;color:var(--muted);margin-bottom:1.25rem">Click to copy &middot; Bitcoin (BTC)</div>
+    <button class="tip-spunk-btn" onclick="openTipModal()">Tip BTC</button>
   </div>
-  <div style="margin-top:32px">
-    <div class="section-sub" style="text-align:center">Follow & share to help grow the empire</div>
-    <div class="follow-grid">
-      <a href="https://x.com/SpunkArt13" target="_blank" rel="noopener" class="follow-card"><span style="font-size:1.2rem">𝕏</span><span style="font-weight:700">@SpunkArt13</span></a>
-      <a href="https://github.com/Spunkeroo" target="_blank" rel="noopener" class="follow-card"><span style="font-size:1.2rem">🐙</span><span style="font-weight:700">GitHub/Spunkeroo</span></a>
-      <a href="https://spunkart.com" target="_blank" rel="noopener" class="follow-card"><span style="font-size:1.2rem">🎨</span><span style="font-weight:700">SpunkArt.com</span></a>
-    </div>
+  <div class="follow-row">
+    <a href="https://x.com/SpunkArt13" target="_blank" rel="noopener" class="follow-card"><span>𝕏</span><span>@SpunkArt13</span></a>
+    <a href="https://github.com/Spunkeroo" target="_blank" rel="noopener" class="follow-card"><span>&#128025;</span><span>Spunkeroo</span></a>
+    <a href="https://spunkart.com" target="_blank" rel="noopener" class="follow-card"><span>&#127912;</span><span>SpunkArt.com</span></a>
+    <a href="https://spunk.bet" target="_blank" rel="noopener" class="follow-card"><span>&#127920;</span><span>Spunk.Bet</span></a>
   </div>
-</section>
-
-<!-- NEWSLETTER + SHARE -->
-<div style="background:linear-gradient(135deg,rgba(191,90,242,.08),rgba(0,245,212,.04));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:40px 24px;text-align:center">
-  <p style="font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:800;margin-bottom:8px">Join the SPUNK Empire</p>
-  <p style="color:var(--muted);font-size:.9rem;margin-bottom:20px">Get notified when new sites launch — no spam, ever</p>
-  <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:20px">
-    <button onclick="shareSpunkMy()" style="background:linear-gradient(135deg,#1da1f2,#0d8ecf);color:#fff;font-weight:700;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;font-size:.88rem">Share on X →</button>
-    <a href="https://spunk.bet" target="_blank" rel="noopener" style="background:linear-gradient(135deg,#bf5af2,#7c3aed);color:#fff;font-weight:800;padding:10px 20px;border-radius:8px;font-size:.88rem;display:inline-block">Play Spunk.Bet Free →</a>
-  </div>
-  <div style="display:flex;gap:8px;max-width:400px;margin:0 auto">
-    <input id="my-nl-email" type="email" placeholder="your@email.com" style="flex:1;background:var(--card);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:8px;font-size:.88rem;font-family:inherit">
-    <button onclick="subscribeMyNL()" style="background:linear-gradient(135deg,#bf5af2,#7c3aed);color:#fff;font-weight:800;border:none;padding:10px 18px;border-radius:8px;cursor:pointer;white-space:nowrap">Subscribe</button>
-  </div>
-  <p id="my-nl-msg" style="color:#22c55e;font-size:.8rem;margin-top:8px;display:none">You're in the empire now.</p>
 </div>
+
 <footer>
-  <div class="footer-logo">spunk.my</div>
-  <p style="color:var(--muted);font-size:.85rem;margin-bottom:16px">SPUNK LLC — Illinois, 2026 — Built by @SpunkArt13 — All sites free forever</p>
-  <button class="tip-spunk-btn" onclick="openTipModal()">🧡 Tip Spunk</button>
-  <p style="color:var(--muted);font-size:.75rem;margin-top:16px">© 2026 SPUNK LLC. Not financial advice.</p>
+  <div style="margin-bottom:.4rem">SPUNK LLC &middot; Illinois 2026 &middot; Built by <a href="https://x.com/SpunkArt13" target="_blank">@SpunkArt13</a></div>
+  <div>&copy; 2026 SPUNK LLC &middot; All sites free &middot; Not financial advice</div>
 </footer>
-<nav class="mobile-nav">
-  <div class="mobile-nav-inner">
-    <a href="/" class="m-nav-item active"><span>🧡</span>Home</a>
-    <a href="#empire" class="m-nav-item"><span>🌐</span>Empire</a>
-    <a href="https://spunk.bet" class="m-nav-item"><span>🎰</span>Play</a>
-    <a href="#support" class="m-nav-item"><span>₿</span>Support</a>
-  </div>
-</nav>
-<style>
-.tip-spunk-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem 1.1rem;border:none;border-radius:999px;font-weight:800;font-size:.85rem;cursor:pointer;color:#fff;background:linear-gradient(135deg,#a855f7,#7c3aed,#c026d3);box-shadow:0 0 14px rgba(168,85,247,.6);transition:all .2s;animation:tipGlow 2s ease-in-out infinite}
-@keyframes tipGlow{0%,100%{box-shadow:0 0 14px rgba(168,85,247,.6)}50%{box-shadow:0 0 28px rgba(192,38,211,.85)}}
-.tip-overlay{display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,.78);backdrop-filter:blur(6px);justify-content:center;align-items:center}
-.tip-overlay.active{display:flex}
-.tip-box{background:#12121a;border:2px solid #7c3aed;border-radius:1.25rem;padding:2rem;max-width:400px;width:90%;text-align:center}
-.tip-addr{background:#0a0a0f;border:1px solid #7c3aed;border-radius:.5rem;padding:.75rem;font-family:monospace;font-size:.7rem;word-break:break-all;color:#c084fc;cursor:pointer;margin-bottom:.75rem}
-.tip-close{width:100%;padding:.6rem;background:#1a1a2e;border:1px solid #2a2a3e;color:#f0f0f0;border-radius:10px;font-size:.88rem;cursor:pointer;font-family:inherit}
-.vtr-badge{position:fixed;bottom:76px;left:12px;z-index:9997;display:flex;align-items:center;gap:6px;background:rgba(0,0,0,.72);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:5px 12px 5px 8px;font-size:.72rem;font-weight:700;color:#fff;pointer-events:none}
-.vtr-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;flex-shrink:0;animation:vtrP 2s ease-in-out infinite}
-@keyframes vtrP{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}60%{box-shadow:0 0 0 5px rgba(34,197,94,0)}}
-</style>
+
+<!-- TIP MODAL -->
 <div class="tip-overlay" id="tip-modal" onclick="if(event.target===this)closeTip()">
   <div class="tip-box">
-    <h3 style="color:#c084fc;margin-bottom:.5rem">🧡 Tip Spunk</h3>
-    <p style="color:#a0a0b8;font-size:.88rem;margin-bottom:1rem">Every sat goes to building more free sites. Thank you.</p>
-    <div class="tip-addr" onclick="navigator.clipboard.writeText('bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm').then(()=>{this.textContent='✓ Copied! 🧡';setTimeout(()=>this.textContent='bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm',2000)})">bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm</div>
-    <p style="font-size:.72rem;color:#6b6b80;margin-bottom:1rem">Click to copy • Bitcoin (BTC)</p>
+    <h3 style="color:#c084fc;margin-bottom:.5rem;font-size:1.1rem">Support the Empire</h3>
+    <p style="color:var(--muted);font-size:.88rem;margin-bottom:1.25rem">Tips go toward building more free sites and tools. Thank you.</p>
+    <div class="tip-addr" id="tipAddrEl" onclick="copyBtcModal()">bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm</div>
+    <div style="font-size:.72rem;color:var(--muted);margin-bottom:1rem">Click to copy &middot; Bitcoin (BTC)</div>
     <button class="tip-close" onclick="closeTip()">Close</button>
   </div>
 </div>
+
 <div class="vtr-badge" id="vtr-badge"><span class="vtr-dot"></span><span id="vtr-count">...</span></div>
+
 <script>
-window.openTipModal=function(){document.getElementById('tip-modal').classList.add('active')};
-window.closeTip=function(){document.getElementById('tip-modal').classList.remove('active')};
-window.shareSpunkMy=function(){var txt='The SPUNK LLC empire: 120+ free websites covering crypto, gaming, AI, and more — all built by one person. Check it all out at spunk.my via @SpunkArt13';window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(txt),'_blank');};
-window.subscribeMyNL=function(){var em=document.getElementById('my-nl-email');if(!em||!em.value.includes('@'))return;var key='my_nl_'+em.value;if(localStorage.getItem(key))return;localStorage.setItem(key,'1');fetch('https://predict-network-ec767-default-rtdb.firebaseio.com/spunkmy_newsletter.json',{method:'POST',body:JSON.stringify({email:em.value,t:Date.now()}),headers:{'Content-Type':'application/json'}}).catch(function(){});var msg=document.getElementById('my-nl-msg');if(msg)msg.style.display='block';em.value='';};
-(function(){if(window._vtrInit)return;window._vtrInit=true;var DB='https://predict-network-ec767-default-rtdb.firebaseio.com';var site=(location.hostname||'local').replace(/\./g,'_').replace(/[#$\[\]]/g,'_');var sid='s'+Math.random().toString(36).slice(2)+Date.now().toString(36);var sRef=DB+'/vtr/'+site+'/s/'+sid+'.json';var allRef=DB+'/vtr/'+site+'/s.json';function ping(){fetch(sRef,{method:'PUT',body:JSON.stringify({t:Date.now()}),headers:{'Content-Type':'application/json'}}).catch(function(){})}function refresh(){fetch(allRef).then(r=>r.json()).then(d=>{var n=1;if(d&&typeof d==='object'){n=Math.max(1,Object.values(d).filter(v=>v&&v.t&&(Date.now()-v.t)<25000).length);}var el=document.getElementById('vtr-count');if(el)el.textContent=n+(n===1?' visitor':' visitors')+' online';}).catch(()=>{})}var day=new Date().toISOString().slice(0,10);fetch(DB+'/vtr/'+site+'/hits/'+day+'.json').then(r=>r.json()).then(n=>{fetch(DB+'/vtr/'+site+'/hits/'+day+'.json',{method:'PUT',body:JSON.stringify((n||0)+1),headers:{'Content-Type':'application/json'}}).catch(()=>{})}).catch(()=>{});window.addEventListener('pagehide',()=>fetch(sRef,{method:'DELETE',keepalive:true}).catch(()=>{}));ping();refresh();setInterval(()=>{ping();refresh();},10000);})();
+const SITES = [
+  // FLAGSHIP
+  {d:'spunkart.com',c:'flagship',t:'flagship',desc:'Main hub — 120+ free developer tools, ebooks, and resources. Home base of the empire.'},
+  {d:'spunk.bet',c:'flagship',t:'flagship',desc:'Free crypto casino — claim 10,000 SPUNK runes daily, play 10+ games, win ordinals. No deposit ever.'},
+  {d:'spunk.my',c:'flagship',t:'flagship',desc:'This page — every site in the SPUNK empire listed in one place.'},
+  {d:'pfp.best',c:'flagship',t:'flagship',desc:'Profile picture generator — upload, crop, add frames and effects. Free PFP tool.'},
+  {d:'spunk.casino',c:'flagship',t:'flagship',desc:'Crypto casino comparison guide — honest rankings of Stake, Rollbit, BC.Game, Winna, and more.'},
+
+  // SPUNK.*
+  {d:'spunk.baby',c:'spunk',t:'spunk',desc:'Baby and parenting community with live visitor stats.'},
+  {d:'spunk.best',c:'spunk',t:'spunk',desc:'The best of SpunkArt — top tools, top content, curated picks.'},
+  {d:'spunk.casa',c:'spunk',t:'spunk',desc:'Home and real estate content and resources.'},
+  {d:'spunk.codes',c:'spunk',t:'spunk',desc:'Developer codes, snippets, and tools directory.'},
+  {d:'spunk.courses',c:'spunk',t:'spunk',desc:'Free online courses and learning resources directory.'},
+  {d:'spunk.mom',c:'spunk',t:'spunk',desc:'Mom community, parenting content, and resources.'},
+  {d:'spunk.pics',c:'spunk',t:'spunk',desc:'Photo and image sharing community.'},
+  {d:'spunk.sale',c:'spunk',t:'spunk',desc:'Sales, deals, and discount aggregator.'},
+  {d:'spunk.surf',c:'spunk',t:'spunk',desc:'Internet surfing guide — best sites and rabbit holes to explore online.'},
+  {d:'spunk.wiki',c:'spunk',t:'spunk',desc:'Community wiki for SpunkArt topics, crypto, and tools.'},
+  {d:'spunk.work',c:'spunk',t:'spunk',desc:'Remote work resources, job boards, and freelance tools.'},
+
+  // PREDICT.*
+  {d:'predict.horse',c:'predict',t:'predict',desc:'Prediction markets for horse racing and sports outcomes.'},
+  {d:'predict.pics',c:'predict',t:'predict',desc:'Predict which images and art will trend next.'},
+  {d:'predict.mom',c:'predict',t:'predict',desc:'Prediction market for parenting and lifestyle outcomes.'},
+  {d:'predict.gay',c:'predict',t:'predict',desc:'LGBTQ+ community prediction market platform.'},
+  {d:'predict.autos',c:'predict',t:'predict',desc:'Predict automotive trends, EV prices, and car market moves.'},
+  {d:'predict.beauty',c:'predict',t:'predict',desc:'Beauty industry prediction market — trends and brand outcomes.'},
+  {d:'predict.boats',c:'predict',t:'predict',desc:'Marine and boating prediction market.'},
+  {d:'predict.christmas',c:'predict',t:'predict',desc:'Predict holiday season trends and seasonal outcomes.'},
+  {d:'predict.codes',c:'predict',t:'predict',desc:'Tech and coding industry prediction markets.'},
+  {d:'predict.courses',c:'predict',t:'predict',desc:'Online education prediction markets.'},
+  {d:'predict.garden',c:'predict',t:'predict',desc:'Gardening and agriculture prediction markets.'},
+  {d:'predict.hair',c:'predict',t:'predict',desc:'Hair and beauty trend prediction market.'},
+  {d:'predict.makeup',c:'predict',t:'predict',desc:'Makeup and cosmetics trend prediction market.'},
+  {d:'predict.singles',c:'predict',t:'predict',desc:'Dating and relationship prediction markets.'},
+  {d:'predict.skin',c:'predict',t:'predict',desc:'Skincare industry prediction market.'},
+  {d:'predict.surf',c:'predict',t:'predict',desc:'Internet and digital trend prediction markets.'},
+  {d:'predict.tattoo',c:'predict',t:'predict',desc:'Tattoo style and industry prediction market.'},
+  {d:'predict.yachts',c:'predict',t:'predict',desc:'Luxury marine and yacht industry prediction market.'},
+
+  // ALIENS.*
+  {d:'aliens.beauty',c:'aliens',t:'aliens',desc:'AI-powered beauty content and extraterrestrial style guides.'},
+  {d:'aliens.best',c:'aliens',t:'aliens',desc:'The best alien-themed content, art, and community picks.'},
+  {d:'aliens.boutique',c:'aliens',t:'aliens',desc:'Alien-themed boutique and fashion content.'},
+  {d:'aliens.cam',c:'aliens',t:'aliens',desc:'Alien-themed camera and visual content platform.'},
+  {d:'aliens.casa',c:'aliens',t:'aliens',desc:'Alien home decor and futuristic living content.'},
+  {d:'aliens.christmas',c:'aliens',t:'aliens',desc:'Alien holiday content and sci-fi Christmas themes.'},
+  {d:'aliens.codes',c:'aliens',t:'aliens',desc:'Alien-themed developer tools and coding content.'},
+  {d:'aliens.coupons',c:'aliens',t:'aliens',desc:'Out-of-this-world deals and discount coupons.'},
+  {d:'aliens.courses',c:'aliens',t:'aliens',desc:'Sci-fi adjacent courses and educational content.'},
+  {d:'aliens.delivery',c:'aliens',t:'aliens',desc:'Alien delivery themes — food, logistics, sci-fi content.'},
+  {d:'aliens.guru',c:'aliens',t:'aliens',desc:'Alien wisdom — AI-powered advice and knowledge base.'},
+  {d:'aliens.horse',c:'aliens',t:'aliens',desc:'Alien horse racing and cosmic equestrian content.'},
+  {d:'aliens.makeup',c:'aliens',t:'aliens',desc:'Alien-inspired makeup tutorials and cosmic beauty.'},
+  {d:'aliens.mom',c:'aliens',t:'aliens',desc:'Out-of-this-world mom and parenting content.'},
+  {d:'aliens.motorcycles',c:'aliens',t:'aliens',desc:'Futuristic bike content and alien motorcycle reviews.'},
+  {d:'aliens.singles',c:'aliens',t:'aliens',desc:'Cosmic connection and alien singles community.'},
+  {d:'aliens.skin',c:'aliens',t:'aliens',desc:'Futuristic beauty and alien skincare content.'},
+  {d:'aliens.surf',c:'aliens',t:'aliens',desc:'Weird, wonderful, and cosmic web discoveries.'},
+  {d:'aliens.tattoo',c:'aliens',t:'aliens',desc:'Alien tattoo art and extraterrestrial ink inspiration.'},
+  {d:'aliens.today',c:'aliens',t:'aliens',desc:'Daily alien news — sci-fi and UFO content aggregator.'},
+  {d:'aliens.website',c:'aliens',t:'aliens',desc:'Alien website builder and design inspiration.'},
+  {d:'aliens.yachts',c:'aliens',t:'aliens',desc:'Cosmic yachts and extraterrestrial luxury content.'},
+
+  // PLUSH.*
+  {d:'plush.asia',c:'plush',t:'plush',desc:'Asian plush toys, kawaii collectibles, and cute content.'},
+  {d:'plush.beer',c:'plush',t:'plush',desc:'Beer plushies and adult collectible toy content.'},
+  {d:'plush.best',c:'plush',t:'plush',desc:'Best plush toys reviewed — top stuffed animals and collectibles.'},
+  {d:'plush.boats',c:'plush',t:'plush',desc:'Nautical-themed plush toys and maritime collectibles.'},
+  {d:'plush.cam',c:'plush',t:'plush',desc:'Live plush toy streams and collectible showcase.'},
+  {d:'plush.christmas',c:'plush',t:'plush',desc:'Christmas plush toys — holiday stuffed animals and gifts.'},
+  {d:'plush.courses',c:'plush',t:'plush',desc:'Learn to make plush toys — sewing courses and DIY tutorials.'},
+  {d:'plush.delivery',c:'plush',t:'plush',desc:'Plush toy delivery and gift shipping services directory.'},
+  {d:'plush.garden',c:'plush',t:'plush',desc:'Garden-themed plushies and nature-inspired stuffed animals.'},
+  {d:'plush.makeup',c:'plush',t:'plush',desc:'Beauty-themed plush collectibles and makeup art toys.'},
+  {d:'plush.mom',c:'plush',t:'plush',desc:'Mom-approved plush toys and children\'s stuffed animal guides.'},
+  {d:'plush.rest',c:'plush',t:'plush',desc:'Comfort toys and therapeutic stuffed animals for relaxation.'},
+  {d:'plush.surf',c:'plush',t:'plush',desc:'Surf-themed plush toys and beach collectibles.'},
+  {d:'plush.wiki',c:'plush',t:'plush',desc:'Plush toy encyclopedia — collectors guide and care info.'},
+
+  // AI / BOTS
+  {d:'ai13.fun',c:'ai',t:'ai',desc:'AI-powered fun tools and games — free, no signup required.'},
+  {d:'ai13.store',c:'ai',t:'ai',desc:'AI tools store — curated paid and free AI products.'},
+  {d:'aibot.beer',c:'ai',t:'ai',desc:'AI bot for beer recommendations and brewery discovery.'},
+  {d:'aibot.coupons',c:'ai',t:'ai',desc:'AI-powered coupon finder — automatically locates the best discounts.'},
+  {d:'aibot.courses',c:'ai',t:'ai',desc:'AI course recommender — find the best learning resources for any skill.'},
+  {d:'aibot.delivery',c:'ai',t:'ai',desc:'AI delivery assistant — food, package, and logistics tools.'},
+  {d:'aibot.directory',c:'ai',t:'ai',desc:'AI tools directory — comprehensive list by category.'},
+  {d:'aibot.forum',c:'ai',t:'ai',desc:'AI community forum — discuss tools, prompts, and automation.'},
+  {d:'aibot.garden',c:'ai',t:'ai',desc:'AI garden assistant — plant care, growth tracking, and advice.'},
+  {d:'aibot.gay',c:'ai',t:'ai',desc:'AI community tools for LGBTQ+ creators and communities.'},
+  {d:'aibot.poker',c:'ai',t:'ai',desc:'AI poker assistant — hand analysis, strategy, and odds.'},
+  {d:'aibot.rest',c:'ai',t:'ai',desc:'AI relaxation tools — meditation, sleep, and mindfulness bots.'},
+  {d:'aibot.study',c:'ai',t:'ai',desc:'AI study assistant — flashcards, summaries, and learning acceleration.'},
+  {d:'aibot.tattoo',c:'ai',t:'ai',desc:'AI tattoo designer — generate custom tattoo concepts.'},
+  {d:'betai.buzz',c:'ai',t:'ai',desc:'AI-powered betting buzz — trending picks and odds analysis.'},
+
+  // i13 / 13
+  {d:'13.dance',c:'13',t:'13',desc:'Dance music, tutorials, and community for all styles.'},
+  {d:'13.energy',c:'13',t:'13',desc:'Energy sector news, renewable resources, and utility guides.'},
+  {d:'13.golf',c:'13',t:'13',desc:'Golf guides, course reviews, equipment picks, and betting tips.'},
+  {d:'13.markets',c:'13',t:'13',desc:'Prediction markets guide — Kalshi, Polymarket, Manifold and more.'},
+  {d:'13.money',c:'13',t:'13',desc:'Personal finance, crypto investing, and money management resources.'},
+  {d:'i13.autos',c:'13',t:'13',desc:'Auto industry news, EV guides, car reviews, and buying resources.'},
+  {d:'i13.best',c:'13',t:'13',desc:'Business directory — best tools, services, and resources in every category.'},
+  {d:'i13.buzz',c:'13',t:'13',desc:'What\'s buzzing — trending content, viral news, and hot topics.'},
+  {d:'i13.fun',c:'13',t:'13',desc:'SpunkArt link-in-bio — games, tools, social links, and empire access.'},
+  {d:'i13.lat',c:'13',t:'13',desc:'Spanish-language portal — contenido en espanol para la comunidad.'},
+  {d:'i13.pics',c:'13',t:'13',desc:'Picture-focused content — image galleries, art, and visual community.'},
+  {d:'i13.space',c:'13',t:'13',desc:'Live ISS tracker, NASA feeds, astronaut tracker, and space blog.'},
+  {d:'iai.autos',c:'13',t:'13',desc:'AI for autos — vehicle AI tools and automotive AI news.'},
+  {d:'iai.boats',c:'13',t:'13',desc:'AI for boats — marine navigation and boating AI tools.'},
+
+  // MONKEY.*
+  {d:'monkey.boutique',c:'monkey',t:'monkey',desc:'Monkey-themed boutique — quirky fashion and unique collectibles.'},
+  {d:'monkey.charity',c:'monkey',t:'monkey',desc:'Primate conservation, wildlife charity, and giving.'},
+  {d:'monkey.coupons',c:'monkey',t:'monkey',desc:'Coupon aggregator and discount finder.'},
+  {d:'monkey.courses',c:'monkey',t:'monkey',desc:'Business and side hustle education for entrepreneurs.'},
+  {d:'monkey.directory',c:'monkey',t:'monkey',desc:'Directory of quirky, fun, and unusual websites.'},
+  {d:'monkey.gives',c:'monkey',t:'monkey',desc:'Charity and donation portal — giving and philanthropy resources.'},
+  {d:'monkey.investments',c:'monkey',t:'monkey',desc:'Investment education and portfolio tools for beginners.'},
+  {d:'monkey.lat',c:'monkey',t:'monkey',desc:'Latin America content — Spanish-language community and media.'},
+  {d:'monkey.poker',c:'monkey',t:'monkey',desc:'Poker strategy, hand analysis, and card game content.'},
+  {d:'monkey.rent',c:'monkey',t:'monkey',desc:'Rental market guides and property rental resources.'},
+  {d:'monkey.repair',c:'monkey',t:'monkey',desc:'DIY repair guides and fix-it tutorials.'},
+  {d:'monkey.report',c:'monkey',t:'monkey',desc:'Community reports and investigative content.'},
+  {d:'monkey.singles',c:'monkey',t:'monkey',desc:'Quirky singles community and dating content.'},
+
+  // STIMULANT.*
+  {d:'stimulant.beauty',c:'stimulant',t:'stimulant',desc:'Bold beauty content — intense skincare and makeup routines.'},
+  {d:'stimulant.doctor',c:'stimulant',t:'stimulant',desc:'Health and wellness — evidence-based medical information.'},
+  {d:'stimulant.guru',c:'stimulant',t:'stimulant',desc:'Caffeine, nootropics, and performance optimization wisdom.'},
+  {d:'stimulant.homes',c:'stimulant',t:'stimulant',desc:'High-energy home design and vibrant interior inspiration.'},
+  {d:'stimulant.life',c:'stimulant',t:'stimulant',desc:'Productivity, biohacking, and peak performance lifestyle.'},
+  {d:'stimulant.living',c:'stimulant',t:'stimulant',desc:'Modern living with energy — interior design and home content.'},
+  {d:'stimulant.makeup',c:'stimulant',t:'stimulant',desc:'Bold makeup looks and intense color beauty content.'},
+  {d:'stimulant.mom',c:'stimulant',t:'stimulant',desc:'Energized parenting — coffee-fueled mom content.'},
+  {d:'stimulant.online',c:'stimulant',t:'stimulant',desc:'The most engaging content on the internet.'},
+  {d:'stimulant.rest',c:'stimulant',t:'stimulant',desc:'Recovery science — how to rest and bounce back stronger.'},
+  {d:'stimulant.shop',c:'stimulant',t:'stimulant',desc:'Energy products and nootropic supplement reviews.'},
+  {d:'stimulant.site',c:'stimulant',t:'stimulant',desc:'The stimulant content hub — everything high-energy.'},
+  {d:'stimulant.skin',c:'stimulant',t:'stimulant',desc:'Active skincare — science-backed skin treatments and routines.'},
+  {d:'stimulant.top',c:'stimulant',t:'stimulant',desc:'Top stimulant content — viral picks and most-engaging posts.'},
+  {d:'stimulant.website',c:'stimulant',t:'stimulant',desc:'Caffeine culture and nootropics community website.'},
+  {d:'stimulant.wiki',c:'stimulant',t:'stimulant',desc:'Stimulant encyclopedia — comprehensive guide to every stimulant.'},
+  {d:'stimulant.work',c:'stimulant',t:'stimulant',desc:'Productivity tools, focus apps, and deep work guides.'},
+
+  // CLOWN.*
+  {d:'clown.best',c:'clown',t:'clown',desc:'Best clown content — fails, Hall of Fame, voting, Reddit feeds.'},
+  {d:'clown.cam',c:'clown',t:'clown',desc:'Clown camera — live streams and clown video content.'},
+  {d:'clown.sbs',c:'clown',t:'clown',desc:'Side-by-side clown comparisons and content.'},
+  {d:'clown.surf',c:'clown',t:'clown',desc:'Surf the weird, funny, and absurd corners of the web.'},
+
+  // CLAW.*
+  {d:'claw.christmas',c:'claw',t:'claw',desc:'Christmas claw machine games, prizes, and arcade content.'},
+  {d:'claw.green',c:'claw',t:'claw',desc:'Green-themed claw machines and eco arcade content.'},
+  {d:'claw.horse',c:'claw',t:'claw',desc:'Horse-themed claw machines and equestrian prize content.'},
+  {d:'claw.pizza',c:'claw',t:'claw',desc:'Pizza-themed claw machines and food prize arcade content.'},
+  {d:'claw.rentals',c:'claw',t:'claw',desc:'Claw machine rentals for events, parties, and venues.'},
+  {d:'claw.tattoo',c:'claw',t:'claw',desc:'Tattoo-themed claw machine content and ink prize games.'},
+  {d:'claw.toys',c:'claw',t:'claw',desc:'Claw machine toy reviews, prize guides, and win strategies.'},
+
+  // FLIP.*
+  {d:'flip.courses',c:'other',t:'flip',desc:'Courses on flipping — reselling, arbitrage, and profit education.'},
+  {d:'flip.garden',c:'other',t:'flip',desc:'Garden flipping — buy low, sell high on plants and outdoor items.'},
+  {d:'flip.gay',c:'other',t:'flip',desc:'LGBTQ+ reselling community and queer marketplace.'},
+  {d:'flip.ink',c:'other',t:'flip',desc:'Flip ink — limited edition books, comics, and print reselling.'},
+
+  // SCAM.*
+  {d:'scam.beauty',c:'other',t:'scam',desc:'Exposing beauty industry scams, fake reviews, and MLM schemes.'},
+  {d:'scam.courses',c:'other',t:'scam',desc:'Expose fake online courses, guru scams, and education fraud.'},
+  {d:'scam.hair',c:'other',t:'scam',desc:'Hair product scams exposed and false claims debunked.'},
+  {d:'scam.horse',c:'other',t:'scam',desc:'Horse racing fraud, scam tipsters, and race fixing exposure.'},
+  {d:'scam.ink',c:'other',t:'scam',desc:'Tattoo scams — fake artists and health violation exposure.'},
+  {d:'scam.makeup',c:'other',t:'scam',desc:'Counterfeit products, fake influencer deals, MLM exposure.'},
+  {d:'scam.singles',c:'other',t:'scam',desc:'Dating scam exposé — romance fraud and catfish warnings.'},
+  {d:'scam.stream',c:'other',t:'scam',desc:'Streaming scams — fake services and subscription fraud.'},
+  {d:'scam.surf',c:'other',t:'scam',desc:'Identifying and exposing online fraud across the web.'},
+  {d:'scam.video',c:'other',t:'scam',desc:'Video scams exposed — misleading ads and video fraud.'},
+  {d:'scam.wiki',c:'other',t:'scam',desc:'Scam encyclopedia — database of online fraud tactics.'},
+
+  // OTHER
+  {d:'pizza.christmas',c:'other',t:'pizza',desc:'Christmas pizza — holiday pizza recipes, deals, and festive pies.'},
+  {d:'pizza.singles',c:'other',t:'pizza',desc:'Pizza for one — solo pizza culture, recipes, and single-slice living.'},
+  {d:'sell.singles',c:'other',t:'sell',desc:'Marketplace for selling singles — vinyl, cards, collectibles.'},
+  {d:'sell.party',c:'other',t:'sell',desc:'Party supplies marketplace — buy and sell event essentials.'},
+  {d:'chicago.coach',c:'other',t:'other',desc:'Chicago life coaching, career guidance, and city living resources.'},
+  {d:'free.gripe',c:'other',t:'other',desc:'Vent anonymously — community complaint board.'},
+  {d:'free.institute',c:'other',t:'other',desc:'Free education institute — no-cost learning resources.'},
+  {d:'fix.mom',c:'other',t:'other',desc:'Fix it for mom — repair guides and home maintenance made simple.'},
+  {d:'clip.christmas',c:'other',t:'other',desc:'Christmas video clips and holiday content aggregator.'},
+];
+
+const TAG_LABELS = {
+  flagship:'Flagship',spunk:'Spunk',predict:'Predict',aliens:'Aliens',
+  plush:'Plush',ai:'AI/Bot','13':'13',monkey:'Monkey',stimulant:'Stimulant',
+  clown:'Clown',claw:'Claw',flip:'Flip',scam:'Scam',pizza:'Pizza',sell:'Sell',other:'Other'
+};
+
+let activeFilter = 'all';
+let searchQ = '';
+
+function setFilter(cat, btn) {
+  activeFilter = cat;
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  renderSites();
+}
+function filterSites() {
+  searchQ = document.getElementById('searchInput').value.toLowerCase();
+  renderSites();
+}
+function renderSites() {
+  const filtered = SITES.filter(s => {
+    const catMatch = activeFilter === 'all' || s.c === activeFilter;
+    const searchMatch = !searchQ || s.d.includes(searchQ) || s.desc.toLowerCase().includes(searchQ) || s.c.includes(searchQ) || s.t.includes(searchQ);
+    return catMatch && searchMatch;
+  });
+  document.getElementById('resultCount').textContent = filtered.length + ' of ' + SITES.length + ' sites';
+  document.getElementById('totalCount').textContent = SITES.length + '+';
+  document.getElementById('sitesGrid').innerHTML = filtered.map(s => `
+    <div class="site-card">
+      <div class="card-top">
+        <div class="card-domain">${s.d}</div>
+        <span class="card-tag tag-${s.t}">${TAG_LABELS[s.t]||s.t}</span>
+      </div>
+      <div class="card-desc">${s.desc}</div>
+      <a class="card-link" href="https://${s.d}" target="_blank" rel="noopener">Visit &rarr;</a>
+    </div>
+  `).join('');
+}
+
+const BTC_ADDR = 'bc1pkepg42ctsvsxk499qu02qqyyz88gwjchnjpsu22wmng9rhpfv3jqw2t2hm';
+function copyBtc() {
+  navigator.clipboard.writeText(BTC_ADDR).then(() => {
+    const el = document.getElementById('btcAddrEl');
+    el.textContent = 'Copied! Thank you.';
+    setTimeout(() => el.textContent = BTC_ADDR, 2500);
+  });
+}
+function copyBtcModal() {
+  navigator.clipboard.writeText(BTC_ADDR).then(() => {
+    const el = document.getElementById('tipAddrEl');
+    el.textContent = 'Copied!';
+    setTimeout(() => el.textContent = BTC_ADDR, 2500);
+  });
+}
+window.openTipModal = function() { document.getElementById('tip-modal').classList.add('active'); };
+window.closeTip = function() { document.getElementById('tip-modal').classList.remove('active'); };
+
+// VTR
+(function(){
+  if(window._vtrInit)return; window._vtrInit=true;
+  var DB='https://predict-network-ec767-default-rtdb.firebaseio.com';
+  var site=(location.hostname||'local').replace(/\./g,'_').replace(/[#$\[\]]/g,'_');
+  var sid='s'+Math.random().toString(36).slice(2)+Date.now().toString(36);
+  var sRef=DB+'/vtr/'+site+'/s/'+sid+'.json';
+  var allRef=DB+'/vtr/'+site+'/s.json';
+  function ping(){fetch(sRef,{method:'PUT',body:JSON.stringify({t:Date.now()}),headers:{'Content-Type':'application/json'}}).catch(()=>{})}
+  function refresh(){fetch(allRef).then(r=>r.json()).then(d=>{
+    var n=1;
+    if(d&&typeof d==='object')n=Math.max(1,Object.values(d).filter(v=>v&&v.t&&(Date.now()-v.t)<25000).length);
+    ['vtr-count','vtr-count-hero'].forEach(id=>{var el=document.getElementById(id);if(el)el.textContent=n+(n===1?' visitor':' visitors');});
+  }).catch(()=>{})}
+  window.addEventListener('pagehide',()=>fetch(sRef,{method:'DELETE',keepalive:true}).catch(()=>{}));
+  ping(); refresh(); setInterval(()=>{ping();refresh();},10000);
+})();
+
+renderSites();
 </script>
 </body>
 </html>
