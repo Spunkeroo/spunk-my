@@ -114,6 +114,24 @@ button{cursor:pointer;font-family:inherit}
 .follow-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:.8rem 1.4rem;display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:.88rem;transition:border-color .2s}
 .follow-card:hover{border-color:var(--cyan)}
 
+/* FLAGSHIP SECTION */
+.flagship-section{max-width:1200px;margin:0 auto;padding:0 2rem 1rem}
+.flagship-label{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.flagship-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(245,158,11,.3),transparent)}
+.flagship-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.fs-card{background:linear-gradient(135deg,var(--bg2),var(--bg3));border:1px solid rgba(245,158,11,.25);border-radius:14px;padding:1.5rem;text-align:center;transition:all .25s;position:relative;overflow:hidden}
+.fs-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--purple),var(--cyan));opacity:0;transition:opacity .3s}
+.fs-card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 12px 40px rgba(245,158,11,.15)}
+.fs-card:hover::before{opacity:1}
+.fs-icon{font-size:2.2rem;margin-bottom:.6rem;display:block}
+.fs-domain{font-size:1rem;font-weight:800;color:#fff;margin-bottom:.3rem}
+.fs-desc{font-size:.75rem;color:var(--muted);line-height:1.4;margin-bottom:.75rem}
+.fs-visit{display:inline-block;font-size:.75rem;font-weight:700;color:var(--gold);padding:.3rem .8rem;border:1px solid rgba(245,158,11,.3);border-radius:6px;transition:all .2s}
+.fs-card:hover .fs-visit{background:var(--gold);color:#000}
+
+@media(max-width:900px){.flagship-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.flagship-grid{grid-template-columns:repeat(2,1fr)}.fs-card:nth-child(5){grid-column:span 2;max-width:260px;margin:0 auto;width:100%}}
+
 /* FOOTER */
 footer{border-top:1px solid var(--border);padding:2rem;text-align:center;color:var(--muted);font-size:.85rem}
 footer a{color:var(--muted)}
@@ -154,6 +172,43 @@ footer a:hover{color:#fff}
     <div class="stat"><div class="stat-val">12+</div><div class="stat-lbl">Brand Networks</div></div>
     <div class="stat"><div class="stat-val">1</div><div class="stat-lbl">Builder</div></div>
     <div class="stat"><div class="stat-val"><span id="vtr-count-hero">...</span></div><div class="stat-lbl">Online Now</div></div>
+  </div>
+</div>
+
+<!-- FLAGSHIP SITES -->
+<div class="flagship-section">
+  <div class="flagship-label">Flagship Sites</div>
+  <div class="flagship-grid">
+    <a href="https://spunkart.com" target="_blank" rel="noopener" class="fs-card">
+      <span class="fs-icon">&#127912;</span>
+      <div class="fs-domain">SpunkArt.com</div>
+      <div class="fs-desc">The original. Art, tools, and the hub of everything SPUNK.</div>
+      <span class="fs-visit">Visit &rarr;</span>
+    </a>
+    <a href="https://spunk.bet" target="_blank" rel="noopener" class="fs-card">
+      <span class="fs-icon">&#127920;</span>
+      <div class="fs-domain">Spunk.Bet</div>
+      <div class="fs-desc">Free crypto casino. 10K daily SPUNK runes. 10+ games. Win ordinals.</div>
+      <span class="fs-visit">Visit &rarr;</span>
+    </a>
+    <a href="https://spunk.codes" target="_blank" rel="noopener" class="fs-card">
+      <span class="fs-icon">&#128187;</span>
+      <div class="fs-domain">Spunk.Codes</div>
+      <div class="fs-desc">580+ developer tools. No sign-up. No paywall. Zero BS.</div>
+      <span class="fs-visit">Visit &rarr;</span>
+    </a>
+    <a href="https://spunk.casino" target="_blank" rel="noopener" class="fs-card">
+      <span class="fs-icon">&#127183;</span>
+      <div class="fs-domain">Spunk.Casino</div>
+      <div class="fs-desc">Crypto casino rankings. Honest reviews of Stake, Winna, BC.Game.</div>
+      <span class="fs-visit">Visit &rarr;</span>
+    </a>
+    <a href="https://pfp.best" target="_blank" rel="noopener" class="fs-card">
+      <span class="fs-icon">&#128248;</span>
+      <div class="fs-domain">PFP.best</div>
+      <div class="fs-desc">Profile picture tools. Crypto, AI & design affiliate hub.</div>
+      <span class="fs-visit">Visit &rarr;</span>
+    </a>
   </div>
 </div>
 
@@ -222,18 +277,18 @@ footer a:hover{color:#fff}
 
 <script>
 const SITES = [
-  // FLAGSHIP
-  {d:'spunkart.com',c:'flagship',t:'flagship',desc:'Main hub — 120+ free developer tools, ebooks, and resources. Home base of the empire.'},
+  // FLAGSHIP — ordered per user request
+  {d:'spunkart.com',c:'flagship',t:'flagship',desc:'The original. Art, tools, and the hub of everything SPUNK. Home base of the empire.'},
   {d:'spunk.bet',c:'flagship',t:'flagship',desc:'Free crypto casino — claim 10,000 SPUNK runes daily, play 10+ games, win ordinals. No deposit ever.'},
-  {d:'spunk.my',c:'flagship',t:'flagship',desc:'This page — every site in the SPUNK empire listed in one place.'},
-  {d:'pfp.best',c:'flagship',t:'flagship',desc:'Profile picture generator — upload, crop, add frames and effects. Free PFP tool.'},
+  {d:'spunk.codes',c:'flagship',t:'flagship',desc:'580+ developer tools — JSON, color, SEO, AI, business. No sign-up. No paywall. Zero BS.'},
   {d:'spunk.casino',c:'flagship',t:'flagship',desc:'Crypto casino comparison guide — honest rankings of Stake, Rollbit, BC.Game, Winna, and more.'},
+  {d:'pfp.best',c:'flagship',t:'flagship',desc:'Profile picture tools — upload, crop, add frames & effects. Affiliate hub for crypto, AI & design.'},
 
   // SPUNK.*
   {d:'spunk.baby',c:'spunk',t:'spunk',desc:'Baby and parenting community with live visitor stats.'},
   {d:'spunk.best',c:'spunk',t:'spunk',desc:'The best of SpunkArt — top tools, top content, curated picks.'},
   {d:'spunk.casa',c:'spunk',t:'spunk',desc:'Home and real estate content and resources.'},
-  {d:'spunk.codes',c:'spunk',t:'spunk',desc:'Developer codes, snippets, and tools directory.'},
+  // spunk.codes moved to flagship
   {d:'spunk.courses',c:'spunk',t:'spunk',desc:'Free online courses and learning resources directory.'},
   {d:'spunk.mom',c:'spunk',t:'spunk',desc:'Mom community, parenting content, and resources.'},
   {d:'spunk.pics',c:'spunk',t:'spunk',desc:'Photo and image sharing community.'},
@@ -413,6 +468,15 @@ const SITES = [
   {d:'free.institute',c:'other',t:'other',desc:'Free education institute — no-cost learning resources.'},
   {d:'fix.mom',c:'other',t:'other',desc:'Fix it for mom — repair guides and home maintenance made simple.'},
   {d:'clip.christmas',c:'other',t:'other',desc:'Christmas video clips and holiday content aggregator.'},
+
+  // NEW BUSINESS DIRECTORIES
+  {d:'musichog.com',c:'other',t:'other',desc:'Music industry directory — find producers, engineers, DJs, and music pros.'},
+  {d:'coincould.com',c:'other',t:'other',desc:'Crypto service directory — exchanges, wallets, DeFi, staking, and blockchain tools.'},
+  {d:'editchoice.com',c:'other',t:'other',desc:'Software review directory — find the best editing, design, and productivity tools.'},
+  {d:'earnbuild.com',c:'other',t:'other',desc:'Income opportunity directory — side hustles, freelancing, passive income, and courses.'},
+  {d:'rugtool.com',c:'other',t:'other',desc:'Crypto security audit directory — smart contract auditors, scam detection, and safety tools.'},
+  {d:'fencejob.com',c:'other',t:'other',desc:'Fence contractor directory — find local fence installers, get quotes, and compare materials.'},
+  {d:'dirtyservice.com',c:'other',t:'other',desc:'Dirty job service directory — junk removal, demolition, hazmat, septic, and biohazard pros.'},
 ];
 
 const TAG_LABELS = {
