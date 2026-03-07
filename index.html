@@ -7,6 +7,7 @@
 <meta name="description" content="Every site in the SPUNK empire. 150+ domains across AI, prediction markets, crypto, gaming, and more — all built by @SpunkArt13 / SPUNK LLC.">
 <meta property="og:title" content="The SPUNK Empire — Every Site by @SpunkArt13">
 <meta property="og:description" content="150+ sites: AI bots, prediction markets, crypto casino, gaming, tools, and more.">
+<meta property="og:image" content="https://spunk.my/og-image.html">
 <link rel="canonical" href="https://spunk.my/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
 <style>
@@ -24,6 +25,8 @@ button{cursor:pointer;font-family:inherit}
 .nav-links a:hover{color:#fff}
 .tip-btn-nav{background:linear-gradient(135deg,#a855f7,#7c3aed);color:#fff;border:none;padding:.45rem 1rem;border-radius:20px;font-weight:700;font-size:.8rem;transition:opacity .2s}
 .tip-btn-nav:hover{opacity:.85}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);margin:5px 0;border-radius:2px}
 
 /* HERO */
 .hero{max-width:860px;margin:0 auto;padding:5rem 2rem 2.5rem;text-align:center}
@@ -138,7 +141,9 @@ footer a{color:var(--muted)}
 footer a:hover{color:#fff}
 
 @media(max-width:640px){
-  .nav-links{display:none}
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(10,10,15,.98);padding:1.25rem 2rem;gap:1rem;border-bottom:1px solid var(--border)}
+  .nav-links.open{display:flex}
+  .hamburger{display:block}
   .hero{padding:3rem 1.5rem 2rem}
   .controls,.grid-wrap,.support-section{padding-left:1.25rem;padding-right:1.25rem}
   .stat{min-width:110px}
@@ -148,8 +153,9 @@ footer a:hover{color:#fff}
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav" style="position:relative">
   <span class="nav-logo">spunk.my</span>
+  <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
   <div class="nav-links">
     <a href="#sites">All Sites</a>
     <a href="#support">Support</a>
